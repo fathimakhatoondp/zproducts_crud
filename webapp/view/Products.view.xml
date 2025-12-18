@@ -1,0 +1,61 @@
+<mvc:View controllerName="com.dp.project2.controller.Products"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+    <content>
+					<Table id="productsTableId" items="{oDataModel>/Products}" itemPress="onPressRowInTable" >
+						<headerToolbar>
+							<OverflowToolbar>
+								<content>
+									<Title text="Details"></Title>
+								</content>
+                              
+								<ToolbarSpacer/>
+								<!--<Button text="Previous" press="onPrevPage"/>-->
+								<!--<Button text="Next" press="onNextPage"/>-->
+                                <SearchField id="searchId" width="20rem" search="onSearch"></SearchField>
+                                <Button id="addProductButtonId" tooltip="Add" icon="sap-icon://add" press="onPressAdd" type="Emphasized" />
+								<Button id="sortButtonId" tooltip="Sort" icon="sap-icon://sort" press="onPressSort" type="Emphasized" />
+                                <Button id="groupButtonId" tooltip="Group" icon="sap-icon://menu2" press="onPressGroup" type="Emphasized" />
+                                 
+							</OverflowToolbar>
+						</headerToolbar>
+						<columns>
+							<Column minScreenWidth="Tablet" demandPopin="true">
+								<Text text="ID"></Text>
+							</Column>
+							<Column minScreenWidth="Tablet" demandPopin="true">
+								<Text text="Name"></Text>
+							</Column>
+							<Column minScreenWidth="Tablet" demandPopin="true">
+								<Text text="Description"></Text>
+							</Column>
+							<!-- <Column minScreenWidth="Tablet" demandPopin="true">
+								<Text text="Release Date"></Text>
+							</Column>
+							<Column minScreenWidth="Tablet" demandPopin="true">
+								<Text text="Discontinued Date"></Text>
+							</Column> -->
+							<Column minScreenWidth="Tablet" demandPopin="true">
+								<Text text="Actions" />
+							</Column>
+						</columns>
+						<items>
+							<ColumnListItem type="Active">
+								<cells>
+									<Text text="{oDataModel>ID}"/>
+									<Text text="{oDataModel>Name}"/>
+									<Text text="{oDataModel>Description}"/>
+									<!-- <Text text="{oDataModel>ReleaseDate}"/>
+									<Text text="{oDataModel>DiscontinuedDate}"/> -->
+									<HBox >
+										<Button icon="sap-icon://edit" tooltip="Edit" type="Emphasized" press="onPressEdit" />
+										<Button icon="sap-icon://delete" tooltip="Delete" type="Reject" class="sapUiSmallMarginBeginEnd" press="onPressDelete" />
+									</HBox>
+								</cells>
+							</ColumnListItem>
+						</items>
+					</Table>
+				</content>
+    </Page>
+</mvc:View>

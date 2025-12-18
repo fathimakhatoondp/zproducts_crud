@@ -1,0 +1,91 @@
+<core:FragmentDefinition
+    xmlns:core="sap.ui.core"
+    xmlns="sap.m"
+    xmlns:f="sap.ui.layout.form"
+>
+    <Dialog
+        id="addDialogId"
+        contentWidth="auto"
+        contentHeight="auto"
+    >
+        <customHeader>
+            <Bar>
+                <contentLeft>
+                    <Title text="Add Product" />
+                </contentLeft>
+
+                <contentRight>
+                    <Button
+                        icon="sap-icon://decline"
+                        type="Transparent"
+                        press="onPressCloseDialog"
+                    />
+                </contentRight>
+            </Bar>
+        </customHeader>
+        <content>
+            <f:SimpleForm
+                id="addEditSimpleFormId"
+                editable="true"
+                layout="ResponsiveGridLayout"
+                labelSpanS="4"
+                labelSpanM="3"
+                labelSpanL="3"
+                labelSpanXL="2"
+                emptySpanS="0"
+                emptySpanM="1"
+                emptySpanL="1"
+                emptySpanXL="1"                
+            >
+                <f:content>
+                    <Label text="Product Id" />
+                    <Input
+                        id="productId"
+                        required="true"
+                        placeholder="Enter product Id"
+                        liveChange="onFormValueChange"
+                    />
+
+                    <Label text="Name" />
+                    <Input
+                        id="productNameId"
+                        required="true"
+                        placeholder="Enter product name"
+                        liveChange="onFormValueChange"
+                    />
+
+                    <Label text="Description" />
+                    <Input
+                        id="productDescriptionId"
+                        required="true"
+                        placeholder="Enter product description"
+                        liveChange="onFormValueChange"
+                    />
+
+                    <!-- <Label text="Release Date"></Label>
+                    
+
+                    <Label text="Discontinued Date"></Label>      -->
+                    <Label />
+                    <HBox justifyContent="Center">
+                        <Button
+                            id="saveButtonId"
+                            text="Save"
+                            type="Emphasized"
+                            press="onPressSave"
+                        />
+                    </HBox>
+                </f:content>
+            </f:SimpleForm>
+        </content>
+        <!-- <endButton>
+            <Button
+                id="closeAddFragment"
+                text="Cancel"
+                type="Reject"
+                icon="sap-icon://cancel"
+                press="onPressCancel"
+            />
+        </endButton> -->
+    </Dialog>
+</core:FragmentDefinition>
