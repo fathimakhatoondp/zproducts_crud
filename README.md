@@ -40,3 +40,16 @@ An SAP Fiori application.
 1. Active NodeJS LTS (Long Term Support) version and associated supported NPM version.  (See https://nodejs.org)
 
 
+## Application Output 
+
+### Initial View of all Products
+![InitViewProducts](docs/output_screens/InitialView-Products.png)
+
+### Add Product Fragment
+![AddProduct](docs/output_screens/AddProduct.png)
+
+### Edit Product Fragment same as that of Add
+![EditProduct](docs/output_screens/EditProduct.png)
+
+### Global Search
+![GlobalSearch](docs/output_screens/GlobalSearch.png)
